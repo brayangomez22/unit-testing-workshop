@@ -11,18 +11,23 @@ public class BasicCalculator {
         return number1 + number2;
     }
 
-    public Long resta(Long number1, Long number2) {
+    public Long res(Long number1, Long number2) {
         logger.info( "Summing {} + {}", number1, number2 );
         return number1 - number2;
     }
 
-    public Long multiplicaion(Long number1, Long number2) {
+    public Long mul(Long number1, Long number2) {
         logger.info( "Summing {} + {}", number1, number2 );
         return number1 * number2;
     }
 
-    public Long division(Long number1, Long number2) {
-        logger.info( "Summing {} + {}", number1, number2 );
-        return number1 / number2;
+    public Long div(Long number1, Long number2) {
+        try{
+            logger.info( "Summing {} / {}", number1, number2 );
+            return number1 / number2;
+        } catch (ArithmeticException e){
+            System.out.println("No es posible dividir por 0");
+            return Long.parseLong("0");
+        }
     }
 }

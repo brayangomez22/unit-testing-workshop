@@ -29,8 +29,14 @@ public class App
         Long number2 = Long.valueOf( textNumber2 );
 
         BasicCalculator calculator = new BasicCalculator();
-        Long result = calculator.sum( number1, number2 );
+        Long resultSum = calculator.sum( number1, number2 );
+        Long resultRes = calculator.res( number1, number2 );
+        Long resultMul = calculator.mul( number1, number2 );
+        Long resultDiv = calculator.div( number1, number2 );
 
-        System.out.println( number1 + " + " + number2 + " = " + result );
+        System.out.println( number1 + " + " + number2 + " = " + resultSum );
+        System.out.println( number1 + " - " + number2 + " = " + resultRes );
+        System.out.println( number1 + " * " + number2 + " = " + resultMul );
+        System.out.println( number1 + " / " + number2 + " = " + resultDiv );
     }
 }
