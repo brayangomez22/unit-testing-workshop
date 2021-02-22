@@ -48,7 +48,7 @@ public class BasicCalculatorTest {
     })
     public void severalResta(Long first, Long second, Long expectedResult) {
         assertEquals(expectedResult, basicCalculator.res(first, second),
-                     () -> first + " + " + second + " should equal " + expectedResult);
+                     () -> first + " - " + second + " should equal " + expectedResult);
     }
 
     @DisplayName("Testing several sums")
@@ -61,7 +61,7 @@ public class BasicCalculatorTest {
     })
     public void severalMultiplicacion(Long first, Long second, Long expectedResult) {
         assertEquals(expectedResult, basicCalculator.mul(first, second),
-                     () -> first + " + " + second + " should equal " + expectedResult);
+                     () -> first + " * " + second + " should equal " + expectedResult);
     }
 
     @DisplayName("Testing several sums")
@@ -74,6 +74,6 @@ public class BasicCalculatorTest {
     })
     public void severalDivision(Long first, Long second, Long expectedResult) {
         assertEquals(expectedResult, basicCalculator.div(first, second),
-                     () -> first + " + " + second + " should equal " + expectedResult);
+                     () -> first + " / " + second + " should equal " + expectedResult);
     }
 }
